@@ -7,8 +7,8 @@
     "build": "tsc",
     "lint:js": "eslint --ext \".js,.ts\" --ignore-path .gitignore ./src",
     "lint:prettier": "prettier --check . --config .prettierrc --ignore-path .prettierignore",
-    "lint": "yarn lint:js && yarn lint:prettier",
-    "lint:fix": "prettier --write --list-different . && yarn lint:js --fix"
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lint:fix": "prettier --write --list-different . && npm run lint:js --fix"
   },
   "keywords": [
     "wareki",
