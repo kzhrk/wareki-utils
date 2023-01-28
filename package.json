@@ -1,8 +1,13 @@
 {
   "name": "wareki-utils",
+  "packageManager": "pnpm@7.26.1",
   "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "description": "The provided functions to convert between Japanese era (和暦) and Western calendar (西暦)",
+  "main": "dist/index.js",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
   "scripts": {
     "build": "tsc",
     "lint:js": "eslint --ext \".js,.ts\" --ignore-path .gitignore ./src",
@@ -23,5 +28,14 @@
     "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.3",
     "typescript": "^4.9.4"
-  }
+  },
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kzhrk/wareki-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kzhrk/wareki-utils/issues"
+  },
+  "homepage": "https://github.com/kzhrk/wareki-utils#readme"
 }
