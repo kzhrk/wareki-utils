@@ -6,7 +6,8 @@
   "main": "dist/index.js",
   "files": [
     "src",
-    "dist/*.js"
+    "dist/*.js",
+    "dist/*.d.ts"
   ],
   "scripts": {
     "build": "tsc",
