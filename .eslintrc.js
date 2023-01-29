@@ -3,12 +3,10 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    'jest/globals': true,
   },
-  extends: [
-    'prettier',
-    'plugin:@typescript-eslint/recommended',
-  ],
-  plugins: [],
+  extends: ['prettier', 'plugin:@typescript-eslint/recommended'],
+  plugins: ['jest'],
   parserOptions: {
     sourceType: 'module',
     parser: '@typescript-eslint/parser',
@@ -30,5 +28,12 @@ module.exports = {
       },
     ],
     semi: ['error', 'always'],
+    'jest/consistent-test-it': [
+      'error',
+      {
+        fn: 'it',
+        withinDescribe: 'it',
+      },
+    ],
   },
 };

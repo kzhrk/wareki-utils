@@ -1,22 +1,17 @@
 {
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"],
   "compilerOptions": {
     "baseUrl": ".",
     "outDir": "dist",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./src/*"]
     },
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
+    "esModuleInterop": true,
     "declaration": true
   }
 }
