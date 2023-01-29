@@ -1,7 +1,7 @@
 {
   "name": "wareki-utils",
   "packageManager": "pnpm@7.26.1",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The provided functions to convert between Japanese era (和暦) and Western calendar (西暦)",
   "main": "dist/index.js",
   "files": [
