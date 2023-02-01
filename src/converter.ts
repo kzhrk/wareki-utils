@@ -11,7 +11,8 @@ export function convertGenToOne(year: string | '元'): number {
 export function convertJapaneseEraToWesternCalendar(
   japaneseEra: string,
 ): number | null {
-  const regexpJapaneseEra = new RegExp('(明治|大正|昭和|平成|令和)(.+)');
+  const regexpAllJapaneseEra = Object.keys(WAREKI).map(key => WAREKI[key].jp).join('|');
+  const regexpJapaneseEra = new RegExp(`(${regexpAllJapaneseEra})(.+)`);
   const matchesJapanaseEra = japaneseEra.match(regexpJapaneseEra);
 
   if (matchesJapanaseEra.length === 3) {

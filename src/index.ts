@@ -22,7 +22,8 @@ function convertJapaneseEraToISO8601(wareki: string): string | WarekiError {
 
   if (matchesWareki.length === 4) {
     const [, japaneseEra, month, day] = matchesWareki;
-    const regexpJapaneseEra = new RegExp('(明治|大正|昭和|平成|令和)(.+)');
+    const regexpAllJapaneseEra = Object.keys(WAREKI).map(key => WAREKI[key].jp).join('|');
+    const regexpJapaneseEra = new RegExp(`(${regexpAllJapaneseEra})(.+)`);
     const [, era, yearStr] = japaneseEra.match(regexpJapaneseEra);
 
     if (era && yearStr) {
