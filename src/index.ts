@@ -17,13 +17,16 @@ export type WarekiError = {
 };
 
 function convertJapaneseEraToISO8601(wareki: string): string | WarekiError {
-  const regexpWareki = /^(.+)年(.+)月(.+)日$/;
-  const matchesWareki = wareki.match(regexpWareki);
+  const regexWareki = /^(.+)年(.+)月(.+)日$/;
+  const matchesWareki = wareki.match(regexWareki);
 
   if (matchesWareki.length === 4) {
     const [, japaneseEra, month, day] = matchesWareki;
-    const regexpJapaneseEra = new RegExp('(明治|大正|昭和|平成|令和)(.+)');
-    const [, era, yearStr] = japaneseEra.match(regexpJapaneseEra);
+    const regexAllJapaneseEra = Object.keys(WAREKI)
+      .map((key) => WAREKI[key].jp)
+      .join('|');
+    const regexJapaneseEra = new RegExp(`(${regexAllJapaneseEra})(.+)`);
+    const [, era, yearStr] = japaneseEra.match(regexJapaneseEra);
 
     if (era && yearStr) {
       const year = convertJapaneseEraToWesternCalendar(japaneseEra);
