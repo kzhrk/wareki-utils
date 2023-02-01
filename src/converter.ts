@@ -11,9 +11,11 @@ export function convertGenToOne(year: string | '元'): number {
 export function convertJapaneseEraToWesternCalendar(
   japaneseEra: string,
 ): number | null {
-  const regexpAllJapaneseEra = Object.keys(WAREKI).map(key => WAREKI[key].jp).join('|');
-  const regexpJapaneseEra = new RegExp(`(${regexpAllJapaneseEra})(.+)`);
-  const matchesJapanaseEra = japaneseEra.match(regexpJapaneseEra);
+  const regexAllJapaneseEra = Object.keys(WAREKI)
+    .map((key) => WAREKI[key].jp)
+    .join('|');
+  const regexJapaneseEra = new RegExp(`(${regexAllJapaneseEra})(.+)`);
+  const matchesJapanaseEra = japaneseEra.match(regexJapaneseEra);
 
   if (matchesJapanaseEra.length === 3) {
     const [, era, yearStr] = matchesJapanaseEra;
