@@ -1,4 +1,4 @@
-import { WAREKI, MILLISECONDS_PER_DAY } from '@/constants';
+import { WAREKI, MILLISECONDS_PER_DAY } from './constants';
 
 function dateBetween(date: Date, min: Date, max: Date) {
   return date >= min && date <= max;

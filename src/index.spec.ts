@@ -1,4 +1,4 @@
-import { warekiUtils } from '@/index';
+import { warekiUtils } from './index';
 
 // Japanese era name
 // ref. https://en.wikipedia.org/wiki/Japanese_era_name#Modern_Japan

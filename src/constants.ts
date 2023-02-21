@@ -1,4 +1,4 @@
-import { WarekiError } from '@/index';
+import { WarekiError } from './index';
 
 type Wareki = 'meiji' | 'taisho' | 'showa' | 'heisei' | 'reiwa';
 type WarekiJp = '明治' | '大正' | '昭和' | '平成' | '令和';

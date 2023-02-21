@@ -1,15 +1,15 @@
-import { ERROR, WAREKI } from '@/constants';
+import { ERROR, WAREKI } from './constants';
 import {
   convertJapaneseEraToWesternCalendar,
   convertOneToGen,
-} from '@/converter';
+} from './converter';
 import {
   checkHeisei,
   checkMeiji,
   checkReiwa,
   checkShowa,
   checkTaisho,
-} from '@/validation';
+} from './validation';
 
 export type WarekiError = {
   status: number;
