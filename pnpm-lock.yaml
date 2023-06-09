@@ -19,7 +19,7 @@ devDependencies:
   '@typescript-eslint/parser': 5.49.0_zkdaqh7it7uc4cvz2haft7rc6u
   babel-jest: 29.4.1
   eslint: 8.33.0
-  eslint-config-prettier: 8.6.0_eslint@8.33.0
+  eslint-config-prettier: 8.8.0_eslint@8.33.0
   eslint-plugin-jest: 27.2.1_7gj3ypel5adcepydrbe5igcquy
   jest: 29.4.1
   prettier: 2.8.3
@@ -1462,8 +1462,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.6.0_eslint@8.33.0:
-    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
+  /eslint-config-prettier/8.8.0_eslint@8.33.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
